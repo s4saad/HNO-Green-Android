@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FirstTimeShareHolderLoginActivity">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="159dp"
+        android:padding="20dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/first_time_share_holder_login"
+        android:textColor="@color/colorBlue"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtLastName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bd_round_edt"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/last_name" />
+
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/edtTemporaryPin"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bd_round_edt"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/temporary_pin" />
+    <EditText
+        android:id="@+id/edtTaxIDF"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bd_round_edt"
+        android:paddingLeft="15dp"
+        android:inputType="number"
+        android:maxLength="4"
+        android:layout_marginTop="10dp"
+        android:hint="@string/SSNUM" />
+
+    <Button
+        android:id="@+id/btnLoginFirstTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/bg_round_btn"
+        android:text="@string/login" />
+
+    <TextView
+        android:id="@+id/tvLoginfFS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="5dp"
+        android:text="@string/log"
+        android:textColor="@color/colorBlue"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/tvForgotPasswordFS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="5dp"
+        android:textColor="@color/colorBlue"
+        android:textSize="18sp"
+        android:text="@string/forget_password" />
+
+    <TextView
+        android:id="@+id/tvForgotEverthingFS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="5dp"
+        android:textColor="@color/colorBlue"
+        android:textSize="18sp"
+        android:text="@string/forgot_everytihing"
+         />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:background="@color/colorLightGreen"
+        android:id="@+id/prFirstTimeShareholder"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:indeterminate="true"
+            android:theme="@style/AppTheme.WhiteAccent"
+            />
+    </LinearLayout>
+</RelativeLayout>

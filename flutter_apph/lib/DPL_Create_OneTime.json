@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "ef2e95e9-fc17-48bd-8050-685707c3e043",
+		"name": "sipay-apis a",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "5.2.1 - DPL Create OneTime",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA4ZDQwYjZiYjI3NWFhYTZkZTUwOGU0NGEzZTAyMjcwYzMxMmU3ZjJlYjBkOTAwODI5OWMxMjgzMTQ5ZDIxMTE2MmUzYjQ3Mzk4ZDY0ZDc2In0.eyJhdWQiOiI5IiwianRpIjoiMDhkNDBiNmJiMjc1YWFhNmRlNTA4ZTQ0YTNlMDIyNzBjMzEyZTdmMmViMGQ5MDA4Mjk5YzEyODMxNDlkMjExMTYyZTNiNDczOThkNjRkNzYiLCJpYXQiOjE2MDE4NzU4ODAsIm5iZiI6MTYwMTg3NTg4MCwiZXhwIjoxNjMzNDExODgwLCJzdWIiOiIxMzUzIiwic2NvcGVzIjpbXX0.LrfuoxMpsBYR5xOORxU6RnMU-gHjV0tifG6aUkbOLv0LJ1vBJZ0MbBbW4O3SefkIayyWxDvpnXkPZBzwNzKn3Z8dT2aGkW_YNtZDiELV-FRNvtTn_fWZI76__ai1uUN3JCYMyYJ_iWWclVKLX9odyVsu_XBmrZJGjLmnSGQbVmDVGfshg8y3MEW-Rf9C6R8D632Fx-mLM3rej8HCbl2Uc5LLPQOjBI-uaYXuVWoeR4stPiRhMM8LeMC5Ne4YWH-SxhV7oyoX3nosNP6xZmQjkBfb8TC6ys_HienQK1186HzS5A9ijLfBZeSiZNhb6xpdK2JlmeGotU2rCfLoXPDmHpJjdN0R8gbCctIIXxnc4PMES0YMQaiPW5p6mxDEXbP9Wn2bxtIV1Q_aWMt-mcr4XahcBorT0VjeZx4vxJoJs8n0TG7m2KQ8f96R5IoFpi9aPl1cVKwvauMbZ86nffGQf25Ikh_H2_F1LjI_T8HHITuJs93mgRfFmF1Iq1UE6oiYJWg8Tg8agByGDKod_TgueBhO68sziAHJHD91gZ-SAVCfOgxhVpOG25xVxZ8JFnf0RLPeK9dxtzknd81fbsgjw9Thmy3rVfpzxui73UJ6lmmT2eqALXWGZB8gMP4Qf7j7DB6GsehjkRL8qWVJyQiULanW5D_r74xgUsKzXxCsHvw"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "currency",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "is_amount_set_by_user",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "payment_link_type",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "name_of_product",
+							"value": "\"test product name here\"",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "\"test decription here\"",
+							"type": "text"
+						},
+						{
+							"key": "product_photo",
+							"type": "file",
+							"src": "/C:/Users/user/Downloads/file_example_PNG_2100kB.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://provisioning.sipay.com.tr/merchant/api/dpl/create",
+					"protocol": "https",
+					"host": [
+						"provisioning",
+						"sipay",
+						"com",
+						"tr"
+					],
+					"path": [
+						"merchant",
+						"api",
+						"dpl",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

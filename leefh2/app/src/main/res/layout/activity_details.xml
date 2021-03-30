@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="Details"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_marginTop="45dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reference Number#"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtReferenceNoD"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:enabled="false"
+            android:background="@drawable/bd_round_edt_2_fill"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Initiated Order Date"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtInitOrderDateD"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:enabled="false"
+
+            android:background="@drawable/bd_round_edt_2_fill"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order ID"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtOrderIdD"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:enabled="false"
+
+            android:background="@drawable/bd_round_edt_2_fill"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shareholder ID"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtShareHolderIdD"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:enabled="false"
+
+            android:background="@drawable/bd_round_edt_2_fill"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shareholder Name"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtShareHolderNameD"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:enabled="false"
+
+            android:background="@drawable/bd_round_edt_2_fill"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shareholder Email"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtShareholderEmailD"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:enabled="false"
+
+            android:background="@drawable/bd_round_edt_2_fill"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shares"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtSharesD"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:enabled="false"
+
+            android:background="@drawable/bd_round_edt_2_fill"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Each Share Price"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtSharesPriceD"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:enabled="false"
+
+            android:background="@drawable/bd_round_edt_2_fill"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Amount Payable"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtTotalAmountD"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:enabled="false"
+
+            android:background="@drawable/bd_round_edt_2_fill"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Purchase Status"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edtPurchaseStatusD"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:enabled="false"
+
+            android:background="@drawable/bd_round_edt_2_fill"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tvHeadingPayment"
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Payment Method"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tvSelectPaymentMethodD"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+            android:gravity="center_vertical"
+            android:paddingRight="15dp"
+            android:textSize="18sp"
+            android:background="@drawable/bd_round_edt"
+            android:hint="Payment Method" />
+
+        <EditText
+            android:id="@+id/edtNonSelectPaymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:enabled="false"
+            android:visibility="gone"
+            android:background="@drawable/bd_round_edt_2_fill"
+            android:paddingLeft="15dp"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/tvNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="fsdfsdfsd"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnMoveToPending"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_round_btn"
+                android:textColor="@color/colorWhite"
+                android:layout_margin="5dp"
+                android:text=""/>
+            <Button
+                android:id="@+id/btnCompletePurchase"
+                android:layout_width="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_round_btn"
+                android:textColor="@color/colorWhite"
+                android:text=""/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnCancelOrderD"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_round_btn_red"
+                android:textColor="@color/colorWhite"
+                android:layout_margin="5dp"
+                android:text=""/>
+            <Button
+                android:id="@+id/btnFindAnother"
+                android:layout_width="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_round_btn"
+                android:textColor="@color/colorWhite"
+                android:text="Find Another"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <!--    android:indeterminateTint="@color/colorPrimary"-->
+    </ScrollView>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:background="@color/colorLightGreen"
+        android:id="@+id/prDetails"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:indeterminate="true"
+            android:theme="@style/AppTheme.WhiteAccent"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

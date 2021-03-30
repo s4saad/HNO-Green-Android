@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <CheckBox
+            android:layout_marginTop="10dp"
+            android:id="@+id/chTransferShares"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            app:buttonTint="@color/colorPrimary"
+            android:text="Receiver is not a HNO shareholder yet?"/>
+
+        <EditText
+            android:id="@+id/edtUsernameTS"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bd_round_edt"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:hint="Receiver's Username" />
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/edtEmailTS"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bd_round_edt"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:hint="Receiver's Email" />
+
+        <EditText
+            android:id="@+id/edtNoOfSharesTS"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="15dp"
+            android:inputType="number"
+            android:background="@drawable/bd_round_edt"
+            android:hint="@string/No_Of_Shares" />
+
+        <EditText
+            android:id="@+id/edtMessageToRecieveTS"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="15dp"
+            android:background="@drawable/bd_round_edt"
+            android:hint="@string/message" />
+
+        <Button
+            android:id="@+id/btnTransferShares"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_round_btn"
+            android:textColor="@color/colorWhite"
+            android:text="@string/transfer_shares"/>
+
+
+    </LinearLayout>
+    <!--    android:indeterminateTint="@color/colorPrimary"-->
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:background="@color/colorLightGreen"
+        android:id="@+id/prTransferShares"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:indeterminate="true"
+            android:theme="@style/AppTheme.WhiteAccent"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

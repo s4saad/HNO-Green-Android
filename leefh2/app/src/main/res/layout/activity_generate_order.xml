@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GenerateOrderActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <RelativeLayout
+      android:fitsSystemWindows="true"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <LinearLayout
+          android:padding="10dp"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <RelativeLayout
+              android:layout_marginTop="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="5dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Transaction Ref#"
+                  android:textColor="@android:color/black"
+                  android:textSize="16sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/transRefG"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:text="0"
+                  android:textColor="@android:color/black"
+                  android:textSize="14sp" />
+          </RelativeLayout>
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="5dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Share Price:"
+                  android:textColor="@android:color/black"
+                  android:textSize="16sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/sharePriceG"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:text="0"
+                  android:textColor="@android:color/black"
+                  android:textSize="14sp" />
+          </RelativeLayout>
+          <RelativeLayout
+              android:id="@+id/rlReciver"
+              android:visibility="gone"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="5dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Receiver:"
+                  android:textColor="@android:color/black"
+                  android:textSize="16sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/tvReceiverG"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:text="0"
+                  android:textColor="@android:color/black"
+                  android:textSize="14sp" />
+          </RelativeLayout>
+          <RelativeLayout
+              android:id="@+id/rlReceiverNote"
+              android:visibility="gone"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="5dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Receiver Notes:"
+                  android:textColor="@android:color/black"
+                  android:textSize="16sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/tvReceiverNoteG"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:text="0"
+                  android:textColor="@android:color/black"
+                  android:textSize="14sp" />
+          </RelativeLayout>
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="5dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Shares to Buy:"
+                  android:textColor="@android:color/black"
+                  android:textSize="16sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/shareToBuyG"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:text="0"
+                  android:textColor="@android:color/black"
+                  android:textSize="14sp" />
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="5dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Total Amount to Pay:"
+                  android:textColor="@android:color/black"
+                  android:textSize="16sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/TotalAmountG"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:text="0"
+                  android:textColor="@android:color/black"
+                  android:textSize="14sp" />
+          </RelativeLayout>
+          <androidx.recyclerview.widget.RecyclerView
+              android:visibility="gone"
+              android:id="@+id/recPayment"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"/>
+          <com.tokopedia.expandable.RadioGroupExpandable
+              android:id="@+id/radio_group"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:buttonTint="@color/colorPrimary"
+              app:buttonTint="@color/colorPrimary"
+              style="@style/radionbutton"
+              android:checked="false">
+
+              <com.tokopedia.expandable.ExpandableOptionRadio
+                  android:id="@+id/radio1"
+                  style="@style/radionbutton"
+                  android:checked="false"
+                  android:buttonTint="@color/colorPrimary"
+                  app:buttonTint="@color/colorPrimary"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <TextView
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:id="@+id/txt1"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"/>
+
+              </com.tokopedia.expandable.ExpandableOptionRadio>
+
+              <com.tokopedia.expandable.ExpandableOptionRadio
+                  android:id="@+id/radio2"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <TextView
+                      android:id="@+id/txt2"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"/>
+              </com.tokopedia.expandable.ExpandableOptionRadio>
+              <com.tokopedia.expandable.ExpandableOptionRadio
+                  android:id="@+id/radio3"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <TextView
+                      android:id="@+id/txt3"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"/>
+              </com.tokopedia.expandable.ExpandableOptionRadio>
+              <com.tokopedia.expandable.ExpandableOptionRadio
+                  android:id="@+id/radio4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <TextView
+                      android:id="@+id/txt4"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"/>
+              </com.tokopedia.expandable.ExpandableOptionRadio>
+              <com.tokopedia.expandable.ExpandableOptionRadio
+                  android:id="@+id/radio5"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <TextView
+                      android:id="@+id/txt5"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"/>
+              </com.tokopedia.expandable.ExpandableOptionRadio>
+          </com.tokopedia.expandable.RadioGroupExpandable>
+          <Button
+              android:id="@+id/btnProceedG"
+              android:text="@string/proceed"
+              android:layout_width="match_parent"
+              android:layout_height="45dp"
+              android:layout_marginTop="20dp"
+              android:background="@drawable/bg_round_btn"
+              android:textColor="@color/colorWhite"/>
+      </LinearLayout>
+
+
+
+  </RelativeLayout>
+
+</ScrollView>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/prGenerateOrder"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorLightGreen"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:indeterminate="true"
+            android:theme="@style/AppTheme.WhiteAccent"
+            />
+    </LinearLayout>
+</RelativeLayout>

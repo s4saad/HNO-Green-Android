@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.buyShare.BuySharesFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/text_slideshow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:padding="3dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share Price"
+        android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/sharePriceB"
+        android:editable="false"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="15dp"
+        android:hint="0.100 USD"
+        android:background="@drawable/bd_round_edt_2_fill"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:padding="3dp"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shares to Buy"
+        android:textSize="20sp"/>
+    <EditText
+        android:inputType="number"
+        android:id="@+id/ShareToBuyB"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="15dp"
+        android:hint="0"
+        android:background="@drawable/bd_round_edt"/>
+    <TextView
+        android:layout_marginTop="10dp"
+
+        android:padding="3dp"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Amount (USD)"
+        android:textSize="20sp"/>
+    <EditText
+        android:inputType="numberDecimal"
+        android:id="@+id/TotalAmountB"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="15dp"
+        android:hint="0.00"
+        android:background="@drawable/bd_round_edt"/>
+        <CheckBox
+            android:id="@+id/chBuyShares"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            app:buttonTint="@color/colorPrimary"
+            android:text="Transfer shares to someone else"/>
+
+    <LinearLayout
+        android:id="@+id/lnTranferShare"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/chBuyShares2"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            app:buttonTint="@color/colorPrimary"
+            android:text="Reciver is not an HNO Shareholder yet?"/>
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Receiver's Username"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/edtUserNameB"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bd_round_edt"
+            android:hint="Receiver's Username"
+            android:paddingLeft="15dp" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvEmailB"
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Receiver's Email"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/edtEmailB"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bd_round_edt"
+            android:hint="Receiver's Email"
+            android:paddingLeft="15dp" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/edtMessageB"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="15dp"
+            android:hint="Message to Receiver(e.g Birthday Gift)"
+            android:background="@drawable/bd_round_edt"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnCheckOutB"
+        android:text="@string/proceed"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_round_btn"
+        android:textColor="@color/colorWhite"/>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/prBuyShare"
+        android:visibility="gone"
+        android:background="@color/colorLightGreen"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:indeterminate="true"
+            android:theme="@style/AppTheme.WhiteAccent"
+            />
+    </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

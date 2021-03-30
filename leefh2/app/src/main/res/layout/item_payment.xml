@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_marginLeft="5dp"
+    android:orientation="vertical">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/lin"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="5dp">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/img"-->
+<!--            android:layout_width="22dp"-->
+<!--            android:layout_height="22dp"-->
+<!--            android:src="@drawable/black_circle"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/paymentName"-->
+<!--            android:gravity="center"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:padding="5dp"-->
+<!--            android:text="Pay with Paypal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </LinearLayout>-->
+<!--    <TextView-->
+<!--        android:id="@+id/paymentDetails"-->
+<!--        android:padding="5dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="14sp"-->
+<!--        android:text="sfsdfcsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd"/>-->
+
+    <com.tokopedia.expandable.ExpandableOptionRadio
+        android:id="@+id/radio1"
+        android:buttonTint="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <include layout="@layout/include_content_option" />
+
+    </com.tokopedia.expandable.ExpandableOptionRadio>
+
+</LinearLayout>

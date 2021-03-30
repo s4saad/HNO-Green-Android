@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "154578722484",
+    "firebase_url": "https://hno-green-fuels-shares-apps.firebaseio.com",
+    "project_id": "hno-green-fuels-shares-apps",
+    "storage_bucket": "hno-green-fuels-shares-apps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:154578722484:android:973e89cfabc7f1fd5201e1",
+        "android_client_info": {
+          "package_name": "com.a2ztech.leefh2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "154578722484-kjg39vqiiq1r7li2jafn7p9hjfvnf82m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.a2ztech.leefh2",
+            "certificate_hash": "b65702ed96b7409b7b367022ec1fd72a225c0abb"
+          }
+        },
+        {
+          "client_id": "154578722484-d2d498qa03ata9i4l36ssu7jkp6s5u62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDerTzqKlIeJAYLyOyMDnVG5Y4xc10Q65E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "154578722484-d2d498qa03ata9i4l36ssu7jkp6s5u62.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "154578722484-f1hjbgvpqklun4jdes2baphtjrqq8e1p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Hno.Leef"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:154578722484:android:db86637bc586b9615201e1",
+        "android_client_info": {
+          "package_name": "com.hnogreenfuels.shareholders"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "154578722484-3hn80iapqdk0aqnthgfljr2j8vb0tmea.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hnogreenfuels.shareholders",
+            "certificate_hash": "b65702ed96b7409b7b367022ec1fd72a225c0abb"
+          }
+        },
+        {
+          "client_id": "154578722484-d2d498qa03ata9i4l36ssu7jkp6s5u62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDerTzqKlIeJAYLyOyMDnVG5Y4xc10Q65E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "154578722484-d2d498qa03ata9i4l36ssu7jkp6s5u62.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "154578722484-f1hjbgvpqklun4jdes2baphtjrqq8e1p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Hno.Leef"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

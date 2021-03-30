@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ForgotEverythingActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="159dp"
+        android:padding="20dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/reset_username_password"
+        android:textColor="@color/colorBlue"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtLastNameFE"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bd_round_edt"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/last_name" />
+
+    <EditText
+        android:id="@+id/edtTaxIDFE"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="15dp"
+        android:inputType="number"
+        android:maxLength="4"
+        android:background="@drawable/bd_round_edt"
+        android:hint="@string/last_id_digits" />
+
+    <TextView
+        android:id="@+id/tvQuestionsFE"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="15dp"
+        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:gravity="center_vertical"
+        android:paddingRight="15dp"
+        android:textSize="18sp"
+        android:background="@drawable/bd_round_edt"
+        android:hint="Questions" />
+    <EditText
+        android:id="@+id/edtAnsFE"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="15dp"
+        android:background="@drawable/bd_round_edt"
+        android:hint="Answer" />
+
+    <Button
+        android:id="@+id/btnFindShareholder"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_round_btn"
+        android:textColor="@color/colorWhite"
+        android:text="Find Shareholder" />
+
+    <TextView
+        android:id="@+id/tvLoginFE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="5dp"
+        android:text="@string/log"
+        android:textColor="@color/colorBlue"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvFirstTimeShareHolderFE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="5dp"
+        android:textColor="@color/colorBlue"
+        android:textSize="18sp"
+        android:text="@string/first_time_stake"
+        />
+
+    <TextView
+        android:id="@+id/tvForgotEverthingFE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="5dp"
+        android:textColor="@color/colorBlue"
+        android:textSize="18sp"
+        android:text="@string/forget_password"
+        />
+    <TextView
+        android:id="@+id/tvOR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"/>
+    <EditText
+        android:id="@+id/edtEmailFE"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="15dp"
+        android:background="@drawable/bd_round_edt"
+        android:hint="Email" />
+    <TextView
+        android:id="@+id/tvEmailMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center" />
+    <Button
+        android:id="@+id/btnVerifyEmail"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_round_btn"
+        android:textColor="@color/colorWhite"
+        android:text="" />
+
+</LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/prForgotEverything"
+        android:visibility="gone"
+        android:background="@color/colorLightGreen"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:indeterminate="true"
+            android:theme="@style/AppTheme.WhiteAccent"
+            />
+    </LinearLayout>
+</RelativeLayout>

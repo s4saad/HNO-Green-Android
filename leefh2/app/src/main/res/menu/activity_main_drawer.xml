@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_transaction"
+            android:icon="@drawable/transaction_icon"
+            android:title="@string/transactiona" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/pending_icon"
+            android:title="@string/pending_transactions" />
+        <item
+            android:id="@+id/nav_buy_shares"
+            android:icon="@drawable/buy_share_icon"
+            android:title="@string/buy_shares" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile_icon"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/nav_shareholder_update"
+            android:icon="@drawable/share_holder_update_icon"
+            android:title="@string/shareholder_updates" />
+        <item
+            android:id="@+id/nav_username_password"
+            android:icon="@drawable/profile_icon"
+            android:title="Username/Password" />
+        <item
+            android:id="@+id/nav_invite"
+            android:icon="@drawable/invite"
+            android:title="Invite" />
+        <item
+            android:id="@+id/nav_transfer_shares"
+            android:icon="@drawable/transaction_icon"
+            android:title="Transfer Shares" />
+<!--        <item-->
+<!--            android:id="@+id/nav_file_download"-->
+<!--            android:icon="@drawable/file_download_icon"-->
+<!--            android:title="@string/file_download" />-->
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout_icon"
+            android:title="@string/logout" />
+    </group>
+</menu>

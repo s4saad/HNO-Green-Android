@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:padding="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <ImageView
+           android:id="@+id/logo"
+           android:layout_width="match_parent"
+           android:layout_height="159dp"
+           android:padding="20dp"
+           android:src="@drawable/logo" />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:text="@string/login"
+           android:textColor="@color/colorBlue"
+           android:textSize="22sp"
+           android:textStyle="bold" />
+
+       <EditText
+           android:id="@+id/edtLogin"
+           android:layout_width="match_parent"
+           android:layout_height="45dp"
+           android:background="@drawable/bd_round_edt"
+           android:paddingLeft="15dp"
+           android:layout_marginTop="20dp"
+           android:hint="@string/username" />
+
+       <EditText
+           android:id="@+id/edtPassword"
+           android:layout_marginTop="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="45dp"
+           android:paddingLeft="15dp"
+           android:inputType="textPassword"
+           android:background="@drawable/bd_round_edt"
+           android:hint="@string/password" />
+
+       <Button
+           android:id="@+id/btnLogin"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:background="@drawable/bg_round_btn"
+           android:textColor="@color/colorWhite"
+           android:text="@string/login"/>
+
+       <TextView
+           android:id="@+id/tvForgotPassword"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="right"
+           android:padding="5dp"
+           android:textColor="@color/colorBlue"
+           android:textSize="18sp"
+           android:text="@string/forget_password"/>
+
+       <LinearLayout
+           android:layout_marginTop="10dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="left"
+               android:padding="5dp"
+               android:text="@string/new_user"
+               android:textColor="@android:color/black"
+               android:textSize="18sp" />
+           <TextView
+               android:id="@+id/tvSignUpL"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="left"
+               android:padding="5dp"
+               android:text="@string/sign_up_shareholder"
+               android:textColor="@color/colorBlue"
+               android:textSize="18sp" />
+       </LinearLayout>
+
+
+       <TextView
+           android:visibility="gone"
+           android:id="@+id/tvFirstTimeLogin"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="left"
+           android:padding="5dp"
+           android:textColor="@color/colorBlue"
+           android:textSize="18sp"
+           android:text="Existing shareholder first time login?"            />
+
+       <TextView
+           android:id="@+id/tvForgotEverthing"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="left"
+           android:padding="5dp"
+           android:textColor="@color/colorBlue"
+           android:textSize="18sp"
+           android:text="@string/reset_username_password_"/>
+   </LinearLayout>
+<!--    android:indeterminateTint="@color/colorPrimary"-->
+
+
+<LinearLayout
+    android:visibility="gone"
+    android:background="@color/colorLightGreen"
+    android:id="@+id/prLogin"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ProgressBar
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:indeterminate="true"
+        android:theme="@style/AppTheme.WhiteAccent"
+        />
+</LinearLayout>
+
+</RelativeLayout>

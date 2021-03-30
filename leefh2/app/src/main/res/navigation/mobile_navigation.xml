@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_transaction">
+
+    <fragment
+        android:id="@+id/nav_transaction"
+        android:name="com.hnogreenfuels.shareholders.ui.transaction.TransactionsFragment"
+        android:label="@string/transactiona"
+        tools:layout="@layout/fragment_transactions" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.hnogreenfuels.shareholders.ui.pendingTransactions.PendingTransactionsFragment"
+        android:label="@string/pending_transactions"
+        tools:layout="@layout/fragment_pending_transactions" />
+
+    <fragment
+        android:id="@+id/nav_buy_shares"
+        android:name="com.hnogreenfuels.shareholders.ui.buyShare.BuySharesFragment"
+        android:label="@string/buy_shares"
+        tools:layout="@layout/fragment_buyshare" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.hnogreenfuels.shareholders.ui.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_shareholder_update"
+        android:name="com.hnogreenfuels.shareholders.ui.shareholderUpdates.ShareholderUpdatesFragment"
+        android:label="@string/shareholder_updates"
+        tools:layout="@layout/fragment_file_download" />
+
+    <fragment
+        android:id="@+id/nav_username_password"
+        android:name="com.hnogreenfuels.shareholders.ui.UserNamePassword.UserNamePasswordFragment"
+        android:label="@string/change_username"
+        tools:layout="@layout/fragment_file_download" />
+
+    <fragment
+        android:id="@+id/nav_invite"
+        android:name="com.hnogreenfuels.shareholders.ui.Invite.InviteFragment"
+        android:label="@string/invite"
+        tools:layout="@layout/fragment_invite" />
+
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.hnogreenfuels.shareholders.ui.logout.LogoutFragment"
+        android:label="@string/file_download"
+        tools:layout="@layout/fragment_logout" />
+
+    <fragment
+        android:id="@+id/nav_transfer_shares"
+        android:name="com.hnogreenfuels.shareholders.ui.TransferShares.TransferSharesFragment"
+        android:label="@string/transfer_shares"
+        tools:layout="@layout/fragment_transfer_shares" />
+</navigation>
