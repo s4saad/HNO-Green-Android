@@ -59,7 +59,12 @@ public class GenerateOrderActivity extends AppCompatActivity {
     ExpandableOptionRadio baseExpandableOptionObject2;
     ExpandableOptionRadio baseExpandableOptionObject3;
     ExpandableOptionRadio baseExpandableOptionObject4;
-    TextView text1,text2,text3,text4,text5;
+    ExpandableOptionRadio baseExpandableOptionObject5;
+    ExpandableOptionRadio baseExpandableOptionObject6;
+    ExpandableOptionRadio baseExpandableOptionObject7;
+    ExpandableOptionRadio baseExpandableOptionObject8;
+    ExpandableOptionRadio baseExpandableOptionObject9;
+    TextView text1,text2,text3,text4,text5,text6,text7,text8,text9,text10;
     String share;
     private Button btnProceed;
     private int selected=-1;
@@ -158,11 +163,21 @@ public class GenerateOrderActivity extends AppCompatActivity {
         baseExpandableOptionObject2=findViewById(R.id.radio3);
         baseExpandableOptionObject3=findViewById(R.id.radio4);
         baseExpandableOptionObject4=findViewById(R.id.radio5);
+        baseExpandableOptionObject5 = findViewById(R.id.radio6);
+        baseExpandableOptionObject6 = findViewById(R.id.radio7);
+        baseExpandableOptionObject7 = findViewById(R.id.radio8);
+        baseExpandableOptionObject8 = findViewById(R.id.radio9);
+        baseExpandableOptionObject9 = findViewById(R.id.radio10);
         text1=findViewById(R.id.txt1);
         text2=findViewById(R.id.txt2);
         text3=findViewById(R.id.txt3);
         text4=findViewById(R.id.txt4);
         text5=findViewById(R.id.txt5);
+        text6=findViewById(R.id.txt6);
+        text7=findViewById(R.id.txt7);
+        text8=findViewById(R.id.txt8);
+        text9=findViewById(R.id.txt9);
+        text10=findViewById(R.id.txt10);
 
 
         baseExpandableOptionObject.setExpand(true);
@@ -213,6 +228,47 @@ public class GenerateOrderActivity extends AppCompatActivity {
                 paymentMethodId=mList.get(4).getId();
             }
         });
+        baseExpandableOptionObject5.setExpandableListener(new BaseExpandableOption.ExpandableListener() {
+            @Override
+            public void onExpandViewChange(boolean isExpand) {
+
+                selected=5;
+                paymentMethodId=mList.get(5).getId();
+            }
+        });
+        baseExpandableOptionObject6.setExpandableListener(new BaseExpandableOption.ExpandableListener() {
+            @Override
+            public void onExpandViewChange(boolean isExpand) {
+
+                selected=6;
+                paymentMethodId=mList.get(6).getId();
+            }
+        });
+        baseExpandableOptionObject7.setExpandableListener(new BaseExpandableOption.ExpandableListener() {
+            @Override
+            public void onExpandViewChange(boolean isExpand) {
+
+                selected=7;
+                paymentMethodId=mList.get(7).getId();
+            }
+        });
+        baseExpandableOptionObject8.setExpandableListener(new BaseExpandableOption.ExpandableListener() {
+            @Override
+            public void onExpandViewChange(boolean isExpand) {
+
+                selected=8;
+                paymentMethodId=mList.get(8).getId();
+            }
+        });
+        baseExpandableOptionObject9.setExpandableListener(new BaseExpandableOption.ExpandableListener() {
+            @Override
+            public void onExpandViewChange(boolean isExpand) {
+
+                selected=9;
+                paymentMethodId=mList.get(9).getId();
+            }
+        });
+
 //        recyclerView.addOnItemTouchListener(
 //                new RecyclerItemClickListener(GenerateOrderActivity.this, recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
 //                    @Override public void onItemClick(View view, int position) {
@@ -395,28 +451,58 @@ public class GenerateOrderActivity extends AppCompatActivity {
                                 mList.addAll(response.body().getData().getPayment_method());
                             }
 
-                            for (int j=0;j<mList.size();j++){
+                            for (int j=0;j<response.body().getData().getPayment_method().size();j++){
                                 if (j==0){
-
+                                    baseExpandableOptionObject.setVisibility(View.VISIBLE);
                                     baseExpandableOptionObject.setTitleText(mList.get(0).getName());
                                     text1.setText( Html.fromHtml(mList.get(0).getArgs().getDetails()));
                                 }
                                 if (j==1){
+                                    baseExpandableOptionObject1.setVisibility(View.VISIBLE);
                                     baseExpandableOptionObject1.setTitleText(mList.get(1).getName());
                                     text2.setText( Html.fromHtml(mList.get(1).getArgs().getDetails()));
                                 }
                                 if (j==2){
+                                    baseExpandableOptionObject2.setVisibility(View.VISIBLE);
                                     baseExpandableOptionObject2.setTitleText(mList.get(2).getName());
                                     text3.setText( Html.fromHtml(mList.get(2).getArgs().getDetails()));
                                 }
                                 if (j==3){
+                                    baseExpandableOptionObject3.setVisibility(View.VISIBLE);
                                     baseExpandableOptionObject3.setTitleText(mList.get(3).getName());
                                     text4.setText( Html.fromHtml(mList.get(3).getArgs().getDetails()));
                                 }
                                 if (j==4){
+                                    baseExpandableOptionObject4.setVisibility(View.VISIBLE);
                                     baseExpandableOptionObject4.setTitleText(mList.get(4).getName());
                                     text5.setText( Html.fromHtml(mList.get(4).getArgs().getDetails()));
                                 }
+                                if (j==5){
+                                    baseExpandableOptionObject5.setVisibility(View.VISIBLE);
+                                    baseExpandableOptionObject5.setTitleText(mList.get(5).getName());
+                                    text6.setText( Html.fromHtml(mList.get(5).getArgs().getDetails()));
+                                }
+                                if (j==6){
+                                    baseExpandableOptionObject6.setVisibility(View.VISIBLE);
+                                    baseExpandableOptionObject6.setTitleText(mList.get(6).getName());
+                                    text7.setText( Html.fromHtml(mList.get(6).getArgs().getDetails()));
+                                }
+                                if (j==7){
+                                    baseExpandableOptionObject7.setVisibility(View.VISIBLE);
+                                    baseExpandableOptionObject7.setTitleText(mList.get(7).getName());
+                                    text8.setText( Html.fromHtml(mList.get(7).getArgs().getDetails()));
+                                }
+                                if (j==8){
+                                    baseExpandableOptionObject8.setVisibility(View.VISIBLE);
+                                    baseExpandableOptionObject8.setTitleText(mList.get(8).getName());
+                                    text9.setText( Html.fromHtml(mList.get(8).getArgs().getDetails()));
+                                }
+                                if (j==9){
+                                    baseExpandableOptionObject9.setVisibility(View.VISIBLE);
+                                    baseExpandableOptionObject9.setTitleText(mList.get(9).getName());
+                                    text10.setText( Html.fromHtml(mList.get(9).getArgs().getDetails()));
+                                }
+
                             }
 
 
