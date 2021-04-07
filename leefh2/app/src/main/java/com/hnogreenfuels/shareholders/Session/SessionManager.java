@@ -45,6 +45,7 @@ public class SessionManager {
     public static final String KEY_USER_ID = "user_id";
     public static final String API_KEY = "api_key";
     public static final String DISPLAY_NAME = "display_name";
+    public static final String INVITE = "invite";
     public static final String Array = "array";
     public static final String qty = "qty";
     public static final String amount = "amount";
@@ -108,8 +109,16 @@ public class SessionManager {
         editor.commit();
     }
 
+    public void setInvite(String name) {
+        editor.putString(INVITE, name);
+        editor.commit();
+    }
+
     public String getUserId() {
         return pref.getString(KEY_USER_ID, "");
+    }
+    public String getInvite() {
+        return pref.getString(INVITE, "");
     }
     public String getApiKey() {
         return pref.getString(API_KEY, "");

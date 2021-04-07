@@ -172,6 +172,7 @@ public class LoginActivity extends AppCompatActivity {
                     sessionManager.setApiKet(response.body().getData().getApi_key());
                     sessionManager.setUserId(response.body().getData().getUser_id());
                     sessionManager.setDisplayName(response.body().getData().getDisplay_name());
+                    sessionManager.setInvite(response.body().getInvite());
                     sessionManager.setLogin(true);
 
                     if (response.body().getData().getUser_type().equals("shareholder")){
@@ -230,6 +231,7 @@ public class LoginActivity extends AppCompatActivity {
                         sessionManager.setApiKet(response.body().getData().getApi_key());
                         sessionManager.setUserId(response.body().getData().getUser_id());
                         sessionManager.setDisplayName(response.body().getData().getDisplay_name());
+
                         sessionManager.setLogin(true);
 
                         if (response.body().getData().getUser_type().equals("shareholder")){

@@ -7,6 +7,16 @@ public class LoginModel {
     private String response_msg;
     private Data data;
     private Updates updates;
+    private String invite;
+
+    public String getInvite() {
+        return invite;
+    }
+
+    public void setInvite(String invite) {
+        this.invite = invite;
+    }
+
     private String acknowledge;
     private List<Ppics_All> ppics_all;
     public List<Ppics_All> getPpics_all() {
@@ -121,6 +131,15 @@ public class LoginModel {
         private String email_msg;
         private String email_button;
         private String pincode;
+        private String invite;
+
+        public String getInvite() {
+            return invite;
+        }
+
+        public void setInvite(String invite) {
+            this.invite = invite;
+        }
 
         public String getPincode() {
             return pincode;

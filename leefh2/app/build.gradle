@@ -9,8 +9,8 @@ android {
         applicationId "com.hnogreenfuels.shareholders"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 3
-        versionName "1.2"
+        versionCode 9
+        versionName "1.6"
         multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -41,10 +41,10 @@ dependencies {
 
     ///for images
     implementation 'com.squareup.picasso:picasso:2.5.0'
-    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
 
     ///for APIs
-    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.squareup.retrofit2:retrofit:2.0.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
@@ -60,8 +60,13 @@ dependencies {
 
 
     //paypal payment using Braintree
-    implementation 'com.braintreepayments.api:drop-in:3.7.1'
-    implementation 'com.loopj.android:android-async-http:1.4.9'
+//    implementation 'com.braintreepayments.api:drop-in:5.0.2'
+    implementation 'com.braintreepayments.api:drop-in:3.7.0'
+    implementation 'com.braintreepayments.api:braintree:2.16.0'
+//    implementation ('com.braintreepayments.api:drop-in:3.7.1') {
+//        transitive = true
+//    }
+    implementation 'com.loopj.android:android-async-http:1.4.11'
 
     ///Multidex
     implementation 'androidx.multidex:multidex:2.0.1'
