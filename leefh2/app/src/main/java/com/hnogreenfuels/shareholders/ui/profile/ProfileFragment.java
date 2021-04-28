@@ -246,9 +246,9 @@ public class ProfileFragment extends Fragment {
                                 Log.d("TAG", "onClick: " + which);
                                 spinner.setText(paths[which]);
                                 if (which==1){
-                                    firstName.setVisibility(View.GONE);
+//                                    firstName.setVisibility(View.GONE);
                                     middileName.setVisibility(View.GONE);
-                                    tvfirstName.setVisibility(View.GONE);
+//                                    tvfirstName.setVisibility(View.GONE);
                                     tvmiddleName.setVisibility(View.GONE);
 
                                     tvGroupName.setVisibility(View.VISIBLE);

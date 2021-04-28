@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +24,8 @@ import com.hnogreenfuels.shareholders.Common.Constants;
 import com.hnogreenfuels.shareholders.Common.Functions;
 import com.hnogreenfuels.shareholders.Model.LoginModel;
 import com.hnogreenfuels.shareholders.Session.SessionManager;
+
+import java.net.URLEncoder;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -155,7 +158,7 @@ public class LoginActivity extends AppCompatActivity {
 
         prLogin.setVisibility(View.VISIBLE);
 
-        Call<LoginModel> call = apiInterface.login(Constants.BASE_URL+"login"+"&username="+username+"&password="+password);
+        Call<LoginModel> call = apiInterface.login(Constants.BASE_URL+"login"+"&username="+username+"&password="+Uri.encode(password));
         call.enqueue(new Callback<LoginModel>() {
             @Override
             public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {

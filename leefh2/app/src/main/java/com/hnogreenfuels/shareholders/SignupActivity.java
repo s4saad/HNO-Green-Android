@@ -9,6 +9,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -102,7 +103,7 @@ public class SignupActivity extends AppCompatActivity {
                                 Log.d("TAG", "onClick: " + which);
                                 spinner.setText(paths[which]);
                                 if (which==1){
-                                    firstName.setVisibility(View.GONE);
+//                                    firstName.setVisibility(View.GONE);
                                     middleName.setVisibility(View.GONE);
                                     comapny.setVisibility(View.VISIBLE);
                                 }
@@ -216,6 +217,7 @@ public class SignupActivity extends AppCompatActivity {
                         &&password.getText().toString().equals(confirmPassword.getText().toString())){
 
                     if (Constants.checkInternetConnection(SignupActivity.this)){
+                        Log.d("TAG", "jsonSignUP: "+firstName.getText().toString());
                         jsonSignUP();
                     }else {
                         Toast.makeText(SignupActivity.this, "No internet connection", Toast.LENGTH_SHORT).show();
@@ -255,9 +257,11 @@ public class SignupActivity extends AppCompatActivity {
 
     public void jsonSignUP() {
 
+        Log.d("TAG", "jsonSignUP: "+firstName.getText().toString());
+
         prSignup.setVisibility(View.VISIBLE);
 
-        Call<LoginModel> call = apiInterface.login(Constants.BASE_URL+"signup"+"&username="+username.getText().toString()+"&password="+password.getText().toString()+"&re_password="+confirmPassword.getText().toString()+"&email="+email.getText().toString()+"&ssn="+tax.getText().toString()+"&type="+paths[selected]+"&firstname="+firstName.getText().toString()+"&middlename="+middleName.getText().toString()+"&company&lastname="+lastName.getText().toString()+"&suffix="+suffix.getText().toString()+"&address="+address.getText().toString()+"&city="+city.getText().toString()+"&state="+state.getText().toString()+"&country="+country.getText().toString()+"&zipcode="+zipCode.getText().toString()+"&cell="+cellNo.getText().toString()+"&home="+homeNo.getText().toString()+"&profile="+selectedImageCode);
+        Call<LoginModel> call = apiInterface.login(Constants.BASE_URL+"signup"+"&username="+username.getText().toString()+"&password="+Uri.encode(password.getText().toString())+"&re_password="+Uri.encode(confirmPassword.getText().toString())+"&email="+email.getText().toString()+"&ssn="+tax.getText().toString()+"&type="+paths[selected]+"&firstname="+firstName.getText().toString()+"&middlename="+middleName.getText().toString()+"&company&lastname="+lastName.getText().toString()+"&suffix="+suffix.getText().toString()+"&address="+address.getText().toString()+"&city="+city.getText().toString()+"&state="+state.getText().toString()+"&country="+country.getText().toString()+"&zipcode="+zipCode.getText().toString()+"&cell="+cellNo.getText().toString()+"&home="+homeNo.getText().toString()+"&profile="+selectedImageCode+"&company="+comapny.getText().toString());
         call.enqueue(new Callback<LoginModel>() {
             @Override
             public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {

@@ -1,5 +1,6 @@
 package com.hnogreenfuels.shareholders.ui.transaction;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,6 +18,7 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.hnogreenfuels.shareholders.APIServices.APIClient;
 import com.hnogreenfuels.shareholders.APIServices.APIInterface;
 import com.hnogreenfuels.shareholders.Common.Constants;
@@ -83,7 +85,7 @@ public class TransactionsFragment extends Fragment {
 
         prTransactions.setVisibility(View.VISIBLE);
 
-        Call<TransactionsModel> call = apiInterface.transactions(Constants.BASE_URL+"list_transactions"+"&apikey="+sessionManager.getApiKey());
+        Call<TransactionsModel> call = apiInterface.transactions(Constants.BASE_URL+"list_transactions"+"&apikey="+sessionManager.getApiKey()+"&device_key="+FirebaseInstanceId.getInstance().getToken());
         call.enqueue(new Callback<TransactionsModel>() {
             @Override
             public void onResponse(Call<TransactionsModel> call, Response<TransactionsModel> response) {
