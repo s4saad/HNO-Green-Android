@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,22 +72,55 @@ public class SignupActivity extends AppCompatActivity {
                 android.R.layout.simple_spinner_dropdown_item, paths);
 
         username = findViewById(R.id.userNameS);
+//        username.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
+        username.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
         email = findViewById(R.id.emailS);
+        email.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
         password = findViewById(R.id.passwordS);
+        password.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         confirmPassword = findViewById(R.id.confirmPasswordS);
+        confirmPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         tax = findViewById(R.id.taxS);
+        tax.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         firstName = findViewById(R.id.firstNameS);
+        firstName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         middleName = findViewById(R.id.middleNameS);
+        middleName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         comapny = findViewById(R.id.companyS);
+        comapny.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         lastName = findViewById(R.id.lastNameS);
+        lastName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         address = findViewById(R.id.addressS);
+        address.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         city = findViewById(R.id.cityS);
+        city.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         state = findViewById(R.id.stateS);
+        state.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         country = findViewById(R.id.countryS);
+        country.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         zipCode = findViewById(R.id.codeS);
+        zipCode.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         homeNo = findViewById(R.id.homeNoS);
+        homeNo.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         cellNo = findViewById(R.id.cellNoS);
+        cellNo.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         suffix=findViewById(R.id.suffixS);
+        suffix.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         imgProfile=findViewById(R.id.imgProfileS);
 
         spinner.setOnClickListener(new View.OnClickListener() {

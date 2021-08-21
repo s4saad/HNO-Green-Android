@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -66,18 +67,42 @@ public class BuySharesFragment extends Fragment {
         sessionManager = new SessionManager(getActivity());
 
         prBuyShare = root.findViewById(R.id.prBuyShare);
+
         sharePrice=root.findViewById(R.id.sharePriceB);
+        sharePrice.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         shareToBuy=root.findViewById(R.id.ShareToBuyB);
+        shareToBuy.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         totalAmount=root.findViewById(R.id.TotalAmountB);
+        totalAmount.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         btnCheckOut=root.findViewById(R.id.btnCheckOutB);
+        btnCheckOut.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         chBuyShares=root.findViewById(R.id.chBuyShares);
+        chBuyShares.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         lnTransferShares=root.findViewById(R.id.lnTranferShare);
+
         chBuyShares2=root.findViewById(R.id.chBuyShares2);
+        chBuyShares2.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         tvUsername=root.findViewById(R.id.tvUsername);
+        tvUsername.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         tvEmail=root.findViewById(R.id.tvEmailB);
+        tvEmail.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         edtUsername=root.findViewById(R.id.edtUserNameB);
+        edtUsername.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         edtEmail=root.findViewById(R.id.edtEmailB);
+        edtEmail.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         edtMessage=root.findViewById(R.id.edtMessageB);
+        edtMessage.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
 
         chBuyShares2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

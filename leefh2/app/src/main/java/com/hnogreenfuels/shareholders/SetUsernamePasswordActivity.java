@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -37,10 +38,19 @@ public class SetUsernamePasswordActivity extends AppCompatActivity {
         setContentView(R.layout.activity_set_username_password);
 
         userName=findViewById(R.id.edtUsernameS);
+        userName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         pinCode=findViewById(R.id.edtPinCodeS);
+        pinCode.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         password=findViewById(R.id.edtPasswordS);
+        password.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         confirmPassword=findViewById(R.id.edtConfirmPasswordS);
+        confirmPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         prSetUserNamePassword=findViewById(R.id.prSetUserNamePassword);
+
         btnLogin=findViewById(R.id.btnSetUsernamePassword);
 
         apiInterface = APIClient.getClient().create(APIInterface.class);

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import android.text.InputType;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,9 +59,17 @@ public class TransferSharesFragment extends Fragment {
         sessionManager = new SessionManager(getActivity());
 
         userName=v.findViewById(R.id.edtUsernameTS);
+        userName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         NoOfShares=v.findViewById(R.id.edtNoOfSharesTS);
+        NoOfShares.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         Message=v.findViewById(R.id.edtMessageToRecieveTS);
+        Message.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         Email=v.findViewById(R.id.edtEmailTS);
+        Email.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         btnTransferShares=v.findViewById(R.id.btnTransferShares);
         checkBox=v.findViewById(R.id.chTransferShares);
         progressBar=v.findViewById(R.id.prTransferShares);

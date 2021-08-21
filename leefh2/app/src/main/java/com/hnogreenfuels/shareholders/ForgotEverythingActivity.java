@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -53,12 +54,20 @@ public class ForgotEverythingActivity extends AppCompatActivity {
         tvFirstTimeShareHolderFE=findViewById(R.id.tvFirstTimeShareHolderFE);
         tvForgotEverthingFE=findViewById(R.id.tvForgotEverthingFE);
         lastName=findViewById(R.id.edtLastNameFE);
+        lastName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         taxId=findViewById(R.id.edtTaxIDFE);
+        taxId.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         ans=findViewById(R.id.edtAnsFE);
+        ans.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         questions=findViewById(R.id.tvQuestionsFE);
         btnFindShareholder=findViewById(R.id.btnFindShareholder);
         prForgotEverything=findViewById(R.id.prForgotEverything);
         email=findViewById(R.id.edtEmailFE);
+        email.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         emailDetail=findViewById(R.id.tvEmailMsg);
         btnVerifyEmail=findViewById(R.id.btnVerifyEmail);
         tvOR=findViewById(R.id.tvOR);

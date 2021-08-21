@@ -28,6 +28,7 @@
 
        <EditText
            android:id="@+id/edtLogin"
+           android:inputType="textFilter|textNoSuggestions"
            android:layout_width="match_parent"
            android:layout_height="45dp"
            android:background="@drawable/bd_round_edt"

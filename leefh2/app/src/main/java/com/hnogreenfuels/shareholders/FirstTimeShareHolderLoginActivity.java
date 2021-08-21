@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -38,8 +39,14 @@ public class FirstTimeShareHolderLoginActivity extends AppCompatActivity {
         Functions.initForOrientation(FirstTimeShareHolderLoginActivity.this);
 
         lastName=findViewById(R.id.edtLastName);
+        lastName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         temporaryPin=findViewById(R.id.edtTemporaryPin);
+        temporaryPin.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         last4DigitTax=findViewById(R.id.edtTaxIDF);
+        last4DigitTax.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         prFirstTimeShareholder=findViewById(R.id.prFirstTimeShareholder);
         btnLoginFirstTime=findViewById(R.id.btnLoginFirstTime);
         tvForgotPassword=findViewById(R.id.tvForgotPasswordFS);

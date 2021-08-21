@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -43,8 +44,14 @@ public class ForgotActivity extends AppCompatActivity {
         apiInterface = APIClient.getClient().create(APIInterface.class);
 
         edtEmail = findViewById(R.id.edtEmailForgot);
+        edtEmail.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         edtLastDigits = findViewById(R.id.edtLastDigitForgot);
+        edtLastDigits.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         edtLastName = findViewById(R.id.edtLastNameForgot);
+        edtLastName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         btnVerify = findViewById(R.id.btnVerifyForgot);
         prForgot=findViewById(R.id.prForgot);
         tvLoginForgot=findViewById(R.id.tvLoginForgot);

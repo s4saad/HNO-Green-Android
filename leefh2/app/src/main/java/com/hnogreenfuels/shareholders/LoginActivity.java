@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -55,7 +56,10 @@ public class LoginActivity extends AppCompatActivity {
         sessionManager = new SessionManager(LoginActivity.this);
 
         edtLogin=findViewById(R.id.edtLogin);
+//        edtLogin.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
+        edtLogin.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
         edtPassword=findViewById(R.id.edtPassword);
+//        edtPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
         btnLogin=findViewById(R.id.btnLogin);
         prLogin=findViewById(R.id.prLogin);
         tvForgotPassword=findViewById(R.id.tvForgotPassword);

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +39,8 @@ public class AdministratorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_administrator);
 
         refNo=findViewById(R.id.edtReferenceNo);
+        refNo.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         logout=findViewById(R.id.tvLogout);
         btnFindDetails=findViewById(R.id.btnFindDetails);
         prAdministrator=findViewById(R.id.prAdministrator);

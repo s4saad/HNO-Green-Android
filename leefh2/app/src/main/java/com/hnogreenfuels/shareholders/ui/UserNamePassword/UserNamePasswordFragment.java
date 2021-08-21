@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -55,11 +56,20 @@ public class UserNamePasswordFragment extends Fragment {
         sessionManager = new SessionManager(getActivity());
 
         prUserNamePassword=v.findViewById(R.id.prUserNamePassword);
+
         userNameU=v.findViewById(R.id.userNameU);
+        userNameU.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         txtValidate=v.findViewById(R.id.txtValidate);
         edtOdlPassword=v.findViewById(R.id.edtOdlPassword);
+        edtOdlPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         edtNewPasswordU=v.findViewById(R.id.edtNewPasswordU);
+        edtNewPasswordU.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         edtConfirmPasswordU=v.findViewById(R.id.edtConfirmPasswordU);
+        edtConfirmPasswordU.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         btnUpdate=v.findViewById(R.id.btnUpdate);
 
         yourTextWatcherUserName = new TextWatcher() {

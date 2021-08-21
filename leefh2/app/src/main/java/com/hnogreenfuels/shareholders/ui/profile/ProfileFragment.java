@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.InputType;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -87,32 +88,72 @@ public class ProfileFragment extends Fragment {
 
         prProfile = v.findViewById(R.id.prProfile);
         shareHolderId = v.findViewById(R.id.edtShareHolderIdP);
+        shareHolderId.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         taxID = v.findViewById(R.id.edtTaxIDP);
+        taxID.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         email = v.findViewById(R.id.edtEmailP);
+        email.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         firstName = v.findViewById(R.id.edtFirsrNameP);
+        firstName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         middileName = v.findViewById(R.id.edtMiddleNameP);
+        middileName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         lastName = v.findViewById(R.id.edtLasrNameP);
+        lastName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         suffix = v.findViewById(R.id.edtSuffixP);
+        suffix.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         imgProfile=v.findViewById(R.id.imgProfile);
 
         address = v.findViewById(R.id.edtAddressP);
+        address.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         cell = v.findViewById(R.id.edtCellP);
+        cell.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         username=v.findViewById(R.id.edtUsernameP);
+        username.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         tvfirstName=v.findViewById(R.id.tvfirstName);
+        tvfirstName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         tvmiddleName=v.findViewById(R.id.tvmiddleName);
 
         tvGroupName=v.findViewById(R.id.tvGroupName);
+        tvGroupName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         edtGroupName=v.findViewById(R.id.edtGrounpName);
+        edtGroupName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
+
 
         tvGroupName.setVisibility(View.GONE);
         edtGroupName.setVisibility(View.GONE);
 
         spinner = v.findViewById(R.id.edtTypeP);
+        spinner.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         city = v.findViewById(R.id.edtCityP);
+        city.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
+
         state = v.findViewById(R.id.edtStateP);
+        state.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         country = v.findViewById(R.id.edtCountryP);
+        country.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         zipcode = v.findViewById(R.id.edtZipCodeP);
+        zipcode.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         home = v.findViewById(R.id.edtHomeP);
+        home.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
 
         btnEdit=v.findViewById(R.id.btnEdit);
 

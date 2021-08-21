@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -52,15 +53,35 @@ public class DetailsActivity extends AppCompatActivity {
         sessionManager = new SessionManager(DetailsActivity.this);
 
         RefNo = findViewById(R.id.edtReferenceNoD);
+        RefNo.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         initOrderDate = findViewById(R.id.edtInitOrderDateD);
+        initOrderDate.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         OrderId = findViewById(R.id.edtOrderIdD);
+        OrderId.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         shareholderId = findViewById(R.id.edtShareHolderIdD);
+        shareholderId.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         shareholderName = findViewById(R.id.edtShareHolderNameD);
+        shareholderName.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         shareholderEmail = findViewById(R.id.edtShareholderEmailD);
+        shareholderEmail.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         shares = findViewById(R.id.edtSharesD);
+        shares.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         eachSharePrice = findViewById(R.id.edtSharesPriceD);
+        eachSharePrice.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         totalAmount = findViewById(R.id.edtTotalAmountD);
+        totalAmount.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         purchaseStatus = findViewById(R.id.edtPurchaseStatusD);
+        purchaseStatus.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
         prDetails = findViewById(R.id.prDetails);
         note = findViewById(R.id.tvNote);
         btnMove = findViewById(R.id.btnMoveToPending);
@@ -68,7 +89,10 @@ public class DetailsActivity extends AppCompatActivity {
         btnCancel = findViewById(R.id.btnCancelOrderD);
         btnFindAnother = findViewById(R.id.btnFindAnother);
         tvHeadingPayment=findViewById(R.id.tvHeadingPayment);
+
         edtNonSelectPaymentMethod=findViewById(R.id.edtNonSelectPaymentMethod);
+        edtNonSelectPaymentMethod.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
 
         paymentMethod = findViewById(R.id.tvSelectPaymentMethodD);
         paymentMethodList = new ArrayList();
@@ -268,6 +292,7 @@ public class DetailsActivity extends AppCompatActivity {
         totalAmount.setText(Constants.adminstratorDetails.getTotal_amount());
         purchaseStatus.setText(Constants.adminstratorDetails.getDisplay_status());
         note.setText(Constants.adminstratorDetails.getNotes());
+        paymentMethod.setText(Constants.adminstratorDetails.getPay_method_name());
 
         if (!Constants.adminstratorDetails.isEditable()) {
             note.setEnabled(false);
@@ -286,6 +311,7 @@ public class DetailsActivity extends AppCompatActivity {
 
                                 selected = which;
                                 Log.d("TAG", "onClick: " + which);
+                                Log.d("TAG", "onClick: " + paymentMethodList.get(which).toString());
                                 paymentMethod.setText(paymentMethodList.get(which).toString());
 
 
@@ -306,13 +332,13 @@ public class DetailsActivity extends AppCompatActivity {
             if(selected==-1){
                 selectedPaymentMethod=" ";
             }else {
-                selectedPaymentMethod=  paymentMethodList.get(selected).toString();
+                selectedPaymentMethod=  paymentMethodListSlug.get(selected).toString();
             }
 
         }else {
-            selectedPaymentMethod=Constants.adminstratorDetails.getPay_method_name().toString();
+            selectedPaymentMethod=Constants.adminstratorDetails.getPay_method_slug().toString();
         }
-
+        Log.d("TAG", "onClick: " +"&click_action="+slug+"&pay_method="+selectedPaymentMethod+"&notes="+note.getText().toString());
         Call<LoginModel> call = apiInterface.login(Constants.BASE_URL+"process_purchase"+"&apikey="+sessionManager.getApiKey()+"&trx_reference="+RefNo.getText().toString()+"&click_action="+slug+"&pay_method="+selectedPaymentMethod+"&notes="+note.getText().toString());
         call.enqueue(new Callback<LoginModel>() {
             @Override
